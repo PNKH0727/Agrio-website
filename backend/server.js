@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/agrio', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -25,10 +25,10 @@ app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
 app.get('/api/config/paypal', (req, res) => {
-  res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
+  res.send(process.env.PAYPAL_CLIENT_ID || 'sb-xborr6317295@business.example.com');
 });
 app.get('/api/config/google', (req, res) => {
-  res.send(process.env.GOOGLE_API_KEY || '');
+  res.send(process.env.GOOGLE_API_KEY || 'AIzaSyApGplXLgLLOc--HnIkfCM2kFx_jeK_bVg');
 });
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));

@@ -27,7 +27,7 @@ body {
 }
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #09a03c;
 }
 main {
   grid-area: main;
@@ -35,7 +35,7 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: #09a03c;
   color: #ffffff;
 }
 /* Common */
@@ -191,13 +191,13 @@ img.medium {
   width: 100%;
 }
 img.large {
-  width: 100%;
+  width: 48%;
 }
 
 /* Card */
 .card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  border: 0.1rem #0caa34 solid;
+  background-color: #78e215;
   border-radius: 0.5rem;
   margin: 1rem;
 }
@@ -212,18 +212,18 @@ img.large {
 }
 /* Rating */
 .rating span {
-  color: #f0c040;
+  color: #f82414;
   margin: 0.1rem;
 }
 .rating span:last-child {
-  color: #404040;
+  color: #1a0505;
 }
 /* Alert */
 .loading {
   display: block !important;
 }
 .success {
-  color: #20a020;
+  color: #3d3f39;
 }
 .danger {
   color: #a02020;

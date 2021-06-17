@@ -26,6 +26,7 @@ import {
   ORDER_SUMMARY_SUCCESS,
 } from '../constants/orderConstants';
 
+
 export const createOrder = (order) => async (dispatch, getState) => {
   dispatch({ type: ORDER_CREATE_REQUEST, payload: order });
   try {
@@ -51,6 +52,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
   }
 };
 
+
 export const detailsOrder = (orderId) => async (dispatch, getState) => {
   dispatch({ type: ORDER_DETAILS_REQUEST, payload: orderId });
   const {
@@ -69,6 +71,7 @@ export const detailsOrder = (orderId) => async (dispatch, getState) => {
     dispatch({ type: ORDER_DETAILS_FAIL, payload: message });
   }
 };
+
 
 export const payOrder = (order, paymentResult) => async (
   dispatch,
@@ -91,6 +94,8 @@ export const payOrder = (order, paymentResult) => async (
     dispatch({ type: ORDER_PAY_FAIL, payload: message });
   }
 };
+
+
 export const listOrderMine = () => async (dispatch, getState) => {
   dispatch({ type: ORDER_MINE_LIST_REQUEST });
   const {
@@ -111,6 +116,8 @@ export const listOrderMine = () => async (dispatch, getState) => {
     dispatch({ type: ORDER_MINE_LIST_FAIL, payload: message });
   }
 };
+
+
 export const listOrders = ({ seller = '' }) => async (dispatch, getState) => {
   dispatch({ type: ORDER_LIST_REQUEST });
   const {
@@ -130,6 +137,7 @@ export const listOrders = ({ seller = '' }) => async (dispatch, getState) => {
     dispatch({ type: ORDER_LIST_FAIL, payload: message });
   }
 };
+
 export const deleteOrder = (orderId) => async (dispatch, getState) => {
   dispatch({ type: ORDER_DELETE_REQUEST, payload: orderId });
   const {
@@ -148,6 +156,7 @@ export const deleteOrder = (orderId) => async (dispatch, getState) => {
     dispatch({ type: ORDER_DELETE_FAIL, payload: message });
   }
 };
+
 
 export const deliverOrder = (orderId) => async (dispatch, getState) => {
   dispatch({ type: ORDER_DELIVER_REQUEST, payload: orderId });
